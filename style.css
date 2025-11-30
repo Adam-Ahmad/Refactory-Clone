@@ -1,340 +1,369 @@
 /* Golobal Style  */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  margin: 0%;
-  padding: 0%;
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.6;
+  color: #333;
 }
 
-/* The Container Class */
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-}
-
+/* Navigation Bar */
 .navbar {
-  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
   z-index: 1000;
 }
 
-.navWrapper {
+.nav-wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   align-items: center;
 }
-
-.navWrapper ul {
+.navbar-menu {
   display: flex;
-  gap: 25px;
-  flex-direction: row;
-  justify-content: space-between;
   list-style: none;
-  padding: 20px 0px;
-  align-content: center;
+  text-align: center;
 }
 
-.navWrapper li a {
+.navbar-menu a {
   text-decoration: none;
-  color: black;
-  font-weight: 500px;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-/* Search Button */
-.search-bar {
-  display: inline-flex;
-  align-items: center;
-  /* gap: 0.5rem; */
-  padding: 0;
-  border: none;
-  background-color: #f3ef10;
-  color: black;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-/* Hero Section  */
-
-.hero-section {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-self: auto;
-  align-content: normal;
-  box-sizing: border-box;
-  justify-content: flex-end;
-  background-image: url(https://refactory.academy/wp-content/uploads/2025/08/0G2A8223-768x512.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-height: 600px;
-  padding-bottom: 20px;
-}
-
-.hero-section-heading {
-  padding: 0 20px;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-.heroMainHead {
-  font-size: 48px;
-  font-weight: bold;
-  color: white;
-  text-shadow: #333;
-  text-align: center;
-}
-
-.heroSubHead {
-  font-size: 24px;
-  color: white;
-  text-align: center;
-}
-
-/* buttons */
-.hero-section-buttons {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 15px 30px;
-}
-
-button {
-  padding: 15px 30px;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 15px;
   transition: color 0.3s;
 }
 
-/* hovering */
-.purp {
-  background-color: #6b2d8f;
-  color: white;
+.navbar-menu a:hover {
+  color: #6b2d8f;
 }
 
-.yello {
-  background-color: #86c009;
-  color: white;
+.search-button button {
+  background-color: #c0ff33;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url(https://refactory.academy/wp-content/uploads/2025/08/0G2A8223-768x512.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 95vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 30px;
+}
+
+.hero-section-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+.hero-section-content h4 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+/* Hero Section Buttons  */
+.hero-section-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.purple,
+.yellow,
+.white {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-section-buttons i {
+  margin-left: 10px;
+}
+
+.purple {
+  background-color: #6b2d8f;
+  color: #fff;
+}
+
+.purple:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: purple;
+}
+
+.yellow {
+  background-color: #c0ff33;
+  color: #333;
+}
+.yellow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: purple;
 }
 
 .white {
   background-color: white;
-  color: #6b2d8f;
+  color: #333;
 }
-
-/* Change color on hover */
-.purp:hover {
-  background-color: white;
-  color: purple;
-}
-
-.yello:hover {
-  background-color: white;
-  color: purple;
-}
-
 .white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: rgb(5, 5, 83);
   color: white;
 }
 
-/* About Refactory Section  */
+/* About Section */
 
-.aboutRefactory {
+.about-section {
+  background-color: #f5f5f5;
+  padding: 60px 5%;
+}
+
+.about-section-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  background-color: #f5f5f5;
-  padding: 60px;
-  align-content: normal;
-  column-gap: 20px;
-  align-items: normal;
-  box-sizing: border-box;
-  align-self: auto;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.aboutContant {
-  width: 100%;
-  justify-content: flex-start;
-  padding: 20px;
-}
-
-.imgAbout {
-  max-width: 100%;
-  background-color: #f5f5f5;
-  align-content: center;
-}
-
-.header-about {
+.about-section h2 {
   color: #6b2d8f;
   font-size: 32px;
-  font-weight: bold;
-  text-align: left;
 }
 
-.sub-header-about {
+.about-section-content h3 {
   color: #00bfa5;
   font-size: 24px;
 }
 
-p {
-  margin: 0 0 12px;
-  color: darkgrey;
+.about-section-content p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 15px;
   text-align: justify;
 }
 
-/* hovering */
-.learnMoreButton a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
-
-/* Change color on hover */
-.learnMoreButton:hover {
-  background-color: #1555b4;
-}
-
-/* Explore Featured Courses Section*/
-
-.mainFeatureHeader {
-  color: #6b2d8f;
-  font-size: 32px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.featureSubHeader {
-  color: #00bfa5;
-  font-size: 24px;
-  text-align: center;
-}
-
-.featureSection {
-  align-content: center;
-  align-self: auto;
-  align-items: normal;
-  padding: 50px;
-}
-/* Grid Card  */
-
-.feature {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  align-items: normal;
-  align-content: start;
-  align-self: auto;
-  box-sizing: border-box;
-}
-
-/* Cards */
-.headCardOne,
-.headCardTwo,
-.headCardThree {
-  color: purple;
-  font-size: larger;
-}
-
-.card {
-  width: calc(100 / 3);
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 20px;
-}
-
-img {
-  max-width: 100%;
+.about-section-image img {
+  width: 100%;
   height: auto;
 }
 
-.learnMoreButton {
-  color: white;
-  background-color: rgb(226, 226, 8);
+/* Featured Courses Section */
+
+.feature-section {
+  padding: 60px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Footer Section  */
+.feature-section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-.footer {
+.feature-section-header h3 {
+  color: #00bfa5;
+  font-size: 24px;
+}
+
+.feature-section-header h2 {
+  color: #6b2d8f;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.feature-section-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feature-section-card {
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.feature-section-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.feature-section-card h3 {
+  color: #6b2d8f;
+  padding: 20px 20px 10px;
+  font-size: 24px;
+}
+
+.feature-section-card p {
+  padding: 0 20px 20px;
+  color: #666;
+}
+/* Learn More Buttons */
+
+.learn-more-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #c0ff33;
+}
+
+.learn-more-button:hover {
+  background-color: #4f84d4;
+}
+
+.learn-more-button i {
+  margin-left: 10px;
+}
+
+.feature-section-card .learn-more-button {
+  margin: 0 20px 20px;
+}
+
+/* Footer Section */
+.footer-section {
   background-color: #2c1a4d;
-  padding: 60px 0;
+  color: #fff;
+  padding: 60px 5% 20px;
 }
 
-.pearentFooter {
-  display: flex;
-  align-content: normal;
-  align-items: normal;
-  align-self: auto;
-  box-sizing: border-box;
-  column-gap: 40px;
-  flex-direction: row;
-  flex-basis: auto;
-  color: white;
-  border-bottom: 5px solid white;
+.footer-section-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
 }
 
-.pearentFooter p {
-  color: white;
+.footer-section-column h4 {
+  color: #00bfa5;
+  margin-bottom: 20px;
 }
 
-.pearentFooter li {
+.footer-section-column p,
+.footer-section-column ul {
+  margin-bottom: 15px;
+}
+
+.footer-section-column ul {
   list-style: none;
 }
 
-.footerAboutRefactory {
-  padding: 0px 20px;
-}
-/* Logo for footer  */
-.footerlogo {
-  width: 160px;
-  height: 40px;
+.footer-section-column a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.footerGetInTouch {
+.footer-section-column a:hover {
+  color: #c0ff33;
+}
+.footer-section-column img {
+  width: 60%;
+}
+.about-icons {
   display: flex;
-  align-content: normal;
-  align-items: normal;
-  align-self: auto;
-  box-sizing: border-box;
-  flex-direction: column;
-  flex-basis: auto;
-  padding: 0px 20px;
+  gap: 10px;
 }
 
-.footer h2 {
+.about-icons a {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2c1a4d;
+  font-size: 18px;
+}
+
+.footer-section-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding-top: 20px;
+  color: #ccc;
+}
+
+#location {
   color: teal;
 }
 
-.footerResources {
-  padding: 0px 20px;
+/* Media Queries for Responsive Design  */
+
+@media (max-width: 1024px) {
+  .about-section-container,
+  .feature-section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.footerResources a {
-  color: white;
-  text-decoration: none;
-}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-.footerVisitUs {
-  padding: 0px 20px;
-}
+  .nav-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.footerVisitUs a {
-  color: teal;
-  text-decoration: none;
-  font-size: large;
+  .hero-section-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-section-content p {
+    font-size: 18px;
+  }
+
+  .footer-section-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
